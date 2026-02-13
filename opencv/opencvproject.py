@@ -5,7 +5,6 @@ image_path = "image.jpg"
 img = cv2.imread(image_path)
 
 h, w, c = img.shape
-print("IMAGE FORENSICS REPORT")
 print("Height:", h)
 print("Width :", w)
 print("Channels:", c)
@@ -30,7 +29,6 @@ blue_ratio = blue.mean() / total_mean
 green_ratio = green.mean() / total_mean
 red_ratio = red.mean() / total_mean
 
-print("CHANNEL DOMINANCE REPORT")
 print("Blue channel dominance ratio : ",blue_ratio)
 print("Blue channel influence :", "HIGH" if blue_ratio > 1.1 else "LOW" if blue_ratio < 0.9 else "NORMAL")
 
