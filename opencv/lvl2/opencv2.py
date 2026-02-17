@@ -1,7 +1,12 @@
 import cv2;
 import numpy as np;
 
-img = cv2.imread("image.png")
+img = cv2.imread("image.jpg")
+
+"""img = cv2.resize(img,(1920,1080))
+cv2.imshow("resized",img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()"""
 
 hsv = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
 
