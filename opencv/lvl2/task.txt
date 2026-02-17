@@ -3,13 +3,13 @@ select an image and apply all insta filter on it using open cv and make its coll
 take 1 image 
 apply 10 filter name it 
 and make collage of it 
-name of filter be named on its image 
+name of filter be named on its image   done
 
 project 1 
-make collage of 4 image and aplly open cv tools
+make collage of 4 image and aplly open cv tools  done
 
 project 3 
-take image of a trafic signal and identify which light is on
+take image of a trafic signal and identify which light is on 
 
 project 4 
-take image of a trafic signal and find no of vehicles at that signal
+take image of a trafic signal and find no of vehicles at that signal done
