@@ -3,7 +3,7 @@ import numpy as np
 
 # Load image
 img = cv2.imread("example-of-2d-shapes.png")
-output = img.copy()
+
 
 # Convert to grayscale
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -20,7 +20,6 @@ contours, _ = cv2.findContours(edges, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE
 for c in contours:
     area = cv2.contourArea(c)
 
-    # Ignore small noise
     if area < 500:
         continue
 
@@ -49,15 +48,15 @@ for c in contours:
     elif corners == 6:
         shape_name = "Hexagon"
 
-    else:
+    elif corners > 6:
         shape_name = "Circle"
 
     # Draw contour
-    cv2.drawContours(output, [approx], -1, (0, 255, 0), 3)
+    cv2.drawContours(img, [approx], -1, (0, 255, 0), 3)
 
     # Put text
-    cv2.putText(output, shape_name, (x, y - 10),cv2.FONT_HERSHEY_SIMPLEX,0.7, (255, 0, 0), 2)
+    cv2.putText(img, shape_name, (x, y - 10),cv2.FONT_HERSHEY_SIMPLEX,0.7, (255, 0, 0), 2)
 
-cv2.imshow("Detected Shapes", output)
+cv2.imshow("Detected Shapes", img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()

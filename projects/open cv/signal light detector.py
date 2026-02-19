@@ -3,8 +3,6 @@ import numpy as np
 
 img = cv2.imread("traffic_signal.jpg")
 
-
-
 img = cv2.resize(img, (400,800))
 
 h, w, _ = img.shape
@@ -39,9 +37,7 @@ upper_green = np.array([85,255,255])
 mask_green = cv2.inRange(bottom, lower_green, upper_green)
 green_count = np.count_nonzero(mask_green)
 
-print("Red pixels:", red_count)
-print("Yellow pixels:", yellow_count)
-print("Green pixels:", green_count)
+
 
 # Decide active light
 if red_count > yellow_count and red_count > green_count:
